@@ -39,8 +39,8 @@ class C_connexion extends CI_Controller {
     		
  		
     		// change l'ordre de la date de naissance
-    		$mdp = explode('-',$date);
-    		$mdp1= $dateN[2]."-".$dateN[1]."-".$dateN[0];
+    		$mdp2 = explode('-',$mdp);
+    		$mdp1= $mdp2[2]."-".$mdp2[1]."-".$mdp2[0];
     		
  		
     		

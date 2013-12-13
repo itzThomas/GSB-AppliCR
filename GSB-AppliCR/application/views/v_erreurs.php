@@ -23,10 +23,7 @@ echo link_tag (''.$access.'/assets/css/styles.css');
  	
 <div id="contenu">
 
-
-	
- 	
-     <h2>
+     <h2  style="color: red">
      	<ul>
 	     	<li>Identification utilisateur</li>
 	        <li>erreur Login ou mot de passe</li>
