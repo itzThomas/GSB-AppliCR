@@ -37,7 +37,14 @@ class C_connexion extends CI_Controller {
     		$login = mysql_real_escape_string($this->input->post('login'));
     		$mdp = mysql_real_escape_string($this->input->post('mdp'));
     		
-    		$resultat = $this->m_connexion->connexion($login,$mdp);
+ 		
+    		// change l'ordre de la date de naissance
+    		$mdp = explode('-',$date);
+    		$mdp1= $dateN[2]."-".$dateN[1]."-".$dateN[0];
+    		
+ 		
+    		
+    		$resultat = $this->m_connexion->connexion($login,$mdp1);
     		
     		if ($resultat == 1){
     			
@@ -47,34 +54,25 @@ class C_connexion extends CI_Controller {
     			$id = $info[0]['id'];
     			$prenom = $info[0]['prenom'];
     			
-    			$this->session->set_userdata('login',$login);
-    			
+    			$this->session->set_userdata('login',$login);	
     			$this->session->set_userdata('mdp',$mdp);
     			$this->session->set_userdata('nom',$nom);
     			$this->session->set_userdata('id',$id);
     			$this->session->set_userdata('prenom',$prenom);
-    			
-    			
-    			
+    			 			
  				$data['nom'] = $nom;
  				$data['id'] = $id;
  				
- 				
     			$this->load->view('v_header',$data);
-    			$this->load->view('v_sommaire',$data);
-    		
-    			
-    			//die("vrai");
-    			
-    	
-    			
+    			$this->load->view('v_medicament',$data);
+			
     		}
     		else{
-    			//$this->load->view('v_header',$data);
+    			$this->load->view('v_header',$data);
     			$this->load->model('m_connexion');
     			
     			$this->load->view('v_erreurs',$data);
-    			//die("faux");
+    			
     		}
     		
     	}
@@ -82,10 +80,8 @@ class C_connexion extends CI_Controller {
     		
     		$this->load->view('v_header',$config);
     		$this->load->view('v_erreurs');
-    		//die("erreur");
     	}
 }
-
 
 public function deconnexion() {
 	$this->session->sess_destroy();
