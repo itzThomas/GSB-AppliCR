@@ -22,8 +22,8 @@
 	<div id="contenu">
 		<h1>Medicaments :</h1>
   
-		<p>
-			<label for="nom">Depot légal :</label>
+		<p> 
+			<label for="nom">Depot légal :</label> 
 
 			<?php echo form_input(""); ?>
 			</br>
