@@ -26,9 +26,13 @@ echo link_tag (''.$access.'/assets/css/styles.css');
 
 	
  	
-      <h2>Identification utilisateur</h2>
-       <h3>erreur Login ou mot de passe</h3>
-	
+      <h2>
+     	 <ul>
+     	 	<li>Identification utilisateur</li>	
+     	 	<li>login ou mot de passe erroné</li>	
+ 	     </ul>
+      </h2>
+    
 
 
  	<?php echo form_open('c_connexion/connexion');
