@@ -8,17 +8,12 @@ class M_connexion extends CI_Model{
 	// connexion a la base et comparaison du login et du mot de passe 
 		$this->load->database();
 		
-		//$reponse = ("SELECT count( * ) FROM visiteur where login='".$login."' and mdp='".$mdp."'");
-		
-		
 		$this->db->count_all_results('visiteur');
 		$this->db->from('visiteur');
-		$this->db->where('login',$login);
-	    $this->db->where('mdp',$mdp);
+		$this->db->where('VIS_NOM',$login);
+	    $this->db->where('VIS_DATEEMBAUCHE',$mdp);
 		return $this->db->count_all_results();
-	
-		
-		
+				
 	}
 	
 	
