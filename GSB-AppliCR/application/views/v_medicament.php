@@ -25,7 +25,7 @@
 		<p>
 			<label for="nom">Depot légal :</label>
 
-			<?php echo form_input("MED_DEPOTLEGAL"); ?>
+			<?php echo form_input(""); ?>
 			</br>
 		</p>
 		<p>
