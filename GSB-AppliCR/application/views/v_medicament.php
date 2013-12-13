@@ -21,7 +21,7 @@
 
 	<div id="contenu">
 		<h1>Medicaments :</h1>
-
+  
 		<p>
 			<label for="nom">Depot légal :</label>
 
