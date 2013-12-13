@@ -23,7 +23,8 @@ $config['dossier_access'] = '';
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost/ppe-gsb1/';
+$config['base_url']	= 'http://localhost/ppe-appliCR/';
+//$config['base_url']	= '';
 
 /*
 |--------------------------------------------------------------------------
