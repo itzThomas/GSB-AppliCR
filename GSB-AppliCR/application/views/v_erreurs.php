@@ -32,7 +32,7 @@ echo link_tag (''.$access.'/assets/css/styles.css');
 	        <li>erreur Login ou mot de passe</li>
 	     </ul>
 	</h2>
-
+ 
 
  	<?php echo form_open('c_connexion/connexion');
  		  echo form_error();
