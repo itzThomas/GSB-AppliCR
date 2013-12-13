@@ -22,16 +22,14 @@ $image_properties = array(
 
 
 	<div id="contenu">
-
-
-
-
-		<h2>
-			<ul>
-				<li>Identification utilisateur</li>
-				<li>login ou mot de passe erroné</li>
-			</ul>
-		</h2>
+	
+     <h2  style="color: red">
+     	<ul>
+	     	<li>Identification utilisateur</li>
+	        <li>erreur Login ou mot de passe</li>
+	     </ul>
+	</h2>
+ 
 
 
 
