@@ -8,22 +8,26 @@ class C_medicament extends CI_Controller {
 		 
 		$data['titre'] = 'Liste medicament';
 		$data['access'] = $this->config->item('dossier_access');
-		 
-		 
+		$this->load->helper('form');
+		
+		$this->load->helper(array('form', 'url'));
+		$this->load->library('form_validation');
+	
 		//chargement du modele et de la page de connxion
 		 $this->load->view('v_header',$data);
-		$this->load->view('v_medicament',$data);
+		 $this->affichageListe();
+		
 		 
 	}
-	public function affichage(){
-		$this->load->library('session');
-		$data['titre'] = 'Sommaire';
-		$data['access'] = $this->config->item('dossier_access');
-	
+	private function affichageListe(){
 	
 		// Chargement de la bibliothèque
 		$this->load->model('m_medicament');
 		$this->load->library('form_validation');
+		$data['affiche'] = $this->m_medicament->recupNom();
+		$data['afficheDonnée'] = $this->m_medicament->recupInfo();
+		$this->load->view('v_medicament',$data);
+		
 	}
 }
 	?>
