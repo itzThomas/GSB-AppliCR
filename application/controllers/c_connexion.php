@@ -66,7 +66,7 @@ class C_connexion extends CI_Controller {
     		}
     		else{
     			$this->load->view('v_header',$data);
-    			$thjis->load->
+    			
     			$this->load->model('m_connexion');
     			
     			$this->load->view('v_erreurs',$data);
