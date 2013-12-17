@@ -14,7 +14,7 @@ class C_connexion extends CI_Controller {
     	$this->load->model('m_connexion'); 
     	$this->load->view('v_header',$data);
   		$this->load->view('v_connexion');
-    	
+    	//  test
     }
 
     public function connexion(){
@@ -66,9 +66,7 @@ class C_connexion extends CI_Controller {
     		}
     		else{
     			$this->load->view('v_header',$data);
-    			
-    			$this->load->model('m_connexion');
-    			
+    			$this->load->model('m_connexion');  			
     			$this->load->view('v_erreurs',$data);
     			
     		}
