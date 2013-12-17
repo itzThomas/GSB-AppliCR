@@ -67,10 +67,9 @@ class C_connexion extends CI_Controller {
     		else{
     			$this->load->view('v_header',$data);
     			$this->load->model('m_connexion');  			
-    			$this->load->view('v_erreurs',$data);
-    			
-    		}
-    		
+    			$this->load->view('v_erreurs',$data);	
+    			// ???
+    		}    		
     	}
     	else{
     		
@@ -78,7 +77,6 @@ class C_connexion extends CI_Controller {
     		$this->load->view('v_erreurs');
     	}
 }
-
 public function deconnexion() {
 	$this->session->sess_destroy();
 	$this->index();
