@@ -61,7 +61,8 @@ class C_connexion extends CI_Controller {
  				$data['id'] = $id;
  				
     			$this->load->view('v_header',$data);
-    			$this->load->view('v_medicament',$data);
+    			$this->load->view('menu',$data);
+    			
 			
     		}
     		else{

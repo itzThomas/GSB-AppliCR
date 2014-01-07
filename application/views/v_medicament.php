@@ -13,36 +13,57 @@
 	);?>
 		<?php echo img($image_properties); ?>
 
-
 	</div>
-		<div id="contenu">
+	<div id="contenu">
 		<h1>Medicaments :</h1>
-	<?php $this->load->helper('form');?>
-	<?php $this->load->helper('html');?>
+		<?php $this->load->helper('form');?>
+		<?php $this->load->helper('html');?>
+		<select name="monSelect">
+			<?php 
+			foreach ($affiche as $valeur) {
+?>
 
-<?php 
-	$tab=array();
-	 foreach ($affiche as $item) {?>
-	<?php
-	$item-> MED_NOMCOMMERCIAL;
-	$tab[$item]?>
-	 
-	<?php }?>
- 	<br/>
- 	<?php 	echo form_dropdown('nomMedoc', $tab);
-	echo "<pre>".print_r($affiche, true)."</pre>";
-	
+			<option value="one"
+			<?php echo set_select('nomMedoc',$valeur, TRUE); ?>>
+				<?php echo $valeur['MED_NOMCOMMERCIAL']?>
+			</option>
+
+			<?php }?>
+		</select>
+
+		<?php 
+
+		//Recup valeur array
+		//  	foreach ($affiche as $valeur) {
+// 	$valeur['MED_NOMCOMMERCIAL'];
+//  	}
+// 	echo "<pre>".print_r($affiche, true)."</pre>";
+
+// 	echo set_select('nomMedoc',$valeur );
+
+
+
+// button submit
+	echo form_submit('mysubmit', 'OK');
 	?>
- 
-
-
-
-
-
 		<p>
 			<label for="nom">Depot légal :</label>
+			<?php 
+			foreach ($affiche as $valeur) {
+?>
 
-			<?php echo form_input(); ?>
+			<option value="two" <?php echo set_select('detail',$valeur ); ?>>
+				<?php echo $valeur['MED_DEPOTLEGAL']?>
+			</option>
+
+			<?php }?>
+			</select>
+
+
+
+
+			<?php // echo form_input();
+?>
 			</br>
 		</p>
 		<p>

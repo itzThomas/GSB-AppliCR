@@ -24,7 +24,7 @@ class C_medicament extends CI_Controller {
 		// Chargement de la bibliothèque
 		$this->load->model('m_medicament');
 		$this->load->library('form_validation');
-		$data['affiche'] = $this->m_medicament->recupNom();
+		$data['affiche'] = $this->m_medicament->recupInfo();
 		$data['afficheDonnée'] = $this->m_medicament->recupInfo();
 		$this->load->view('v_medicament',$data);
 		
